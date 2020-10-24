@@ -20,3 +20,22 @@ Completed 200 OK in 4645ms (Views: 4493.8ms | ActiveRecord: 125.4ms)
 Completed 200 OK in 4665ms (Views: 4521.0ms | ActiveRecord: 127.4ms)
 
 
+Started GET "/" for ::1 at 2020-10-24 06:26:19 +0100
+  [1m[35m (33.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (58.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (84.2ms)
+Completed 200 OK in 789ms (Views: 703.4ms | ActiveRecord: 67.2ms)
+
+
+Started GET "/blogs/new" for ::1 at 2020-10-24 06:26:23 +0100
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (170.8ms)
+  Rendered blogs/new.html.erb within layouts/application (179.3ms)
+Completed 200 OK in 262ms (Views: 203.1ms | ActiveRecord: 41.6ms)
+
+
